@@ -10,7 +10,7 @@ function shakdo () {
     music.playTone(784, music.beat(BeatFraction.Quarter))
     music.playTone(784, music.beat(BeatFraction.Half))
 }
-input.onButtonPressed(Button.B, function () {
+input.onButtonPressed(Button.AB, function () {
     music.playTone(587, music.beat(BeatFraction.Whole))
     music.playTone(659, music.beat(BeatFraction.Whole))
     shakdo()
@@ -22,6 +22,14 @@ input.onButtonPressed(Button.B, function () {
     music.playTone(784, music.beat(BeatFraction.Half))
     music.playTone(784, music.beat(BeatFraction.Half))
     music.playTone(740, music.beat(BeatFraction.Whole))
+})
+input.onButtonPressed(Button.B, function () {
+    for (let index = 0; index < 3; index++) {
+        basic.showIcon(IconNames.Heart)
+        basic.showIcon(IconNames.SmallHeart)
+    }
+    basic.clearScreen()
+    basic.showIcon(IconNames.Happy)
 })
 basic.showIcon(IconNames.Happy)
 music.setTempo(115)
